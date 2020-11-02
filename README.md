@@ -1,4 +1,4 @@
-# Spring Boot Learning Server
+# Spring Boot Learning Repository
 
 This repo is a simple restful web application created to learn and practice spring boot.
 
