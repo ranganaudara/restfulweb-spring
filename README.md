@@ -9,3 +9,5 @@ This repo is a simple restful web application created to learn and practice spri
 - H2 Database --> In-memory database
 - Spring HATEOAS --> Contain links in the response
 - Spring Validation --> To validate requests
+- springfox-swagger-ui 
+- springfox-swagger2 --> For API documentation
