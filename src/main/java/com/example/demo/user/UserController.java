@@ -30,6 +30,7 @@ public class UserController {
         if(user == null){
             throw new UserNotFoundException("id-"+id);
         }
+        //To send a link as a response
         EntityModel<User> resource = new EntityModel<User>(user);
         WebMvcLinkBuilder linkTo = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).getAll());
         resource.add(linkTo.withRel("all-users"));
