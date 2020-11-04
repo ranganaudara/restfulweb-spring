@@ -11,3 +11,5 @@ This repo is a simple restful web application created to learn and practice spri
 - Spring Validation --> To validate requests
 - springfox-swagger-ui 
 - springfox-swagger2 --> For API documentation
+- spring-boot-starter-actuator --> get data about the server
+- spring-data-rest-hal-explorer --> JSON Hypertext Application Language, or HAL, is a simple format that gives a consistent and easy way to hyperlink between resources in our API. HAL browser provides an in-browser GUI to traverse your REST API.
