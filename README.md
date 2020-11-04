@@ -14,6 +14,22 @@ This repo is a simple restful web application created to learn and practice spri
 - spring-boot-starter-actuator --> get data about the server
 - spring-data-rest-hal-explorer --> JSON Hypertext Application Language, or HAL, is a simple format that gives a consistent and easy way to hyperlink between resources in our API. HAL browser provides an in-browser GUI to traverse your REST API.
 
+## Content
+
+ 1. Initialising a Spring Boot Project
+ 2. Creating first bean
+ 3. Implementing GET methods
+ 4. Implementing POST methods
+ 5. Return correct status code
+ 6. Exception Handling
+ 7. Implementing DELETE method
+ 8. Implementing request validations
+ 9. Swagger Documentation
+ 10. Monitoring API with Spring Boot Actuator
+ 11. [Filtering](###Filtering)
+  
+
+
 ### Filtering
 #### Static Filtering
  1. Create FilteringController class
