@@ -7,8 +7,11 @@ import org.springframework.hateoas.client.LinkDiscoverer;
 import org.springframework.hateoas.client.LinkDiscoverers;
 import org.springframework.hateoas.mediatype.collectionjson.CollectionJsonLinkDiscoverer;
 import org.springframework.plugin.core.SimplePluginRegistry;
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
+import springfox.documentation.service.Tag;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -19,12 +22,20 @@ import java.util.List;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
-    private static final Contact DEFAULT_CONTACT = new Contact("Rangana Udara","","rangana.udara915@gmail.com");
-    private static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Learning api documentation","This api is created for learning purposes.","1.0","",DEFAULT_CONTACT,"urn:tos","Apache 2.0");
+
+    public static final String TAG_1 = "tag1";
 
     @Bean
     public Docket api(){
-        return new Docket(DocumentationType.SWAGGER_2).apiInfo(DEFAULT_API_INFO);
+        return new Docket(DocumentationType.SWAGGER_2).select()
+                .apis(RequestHandlerSelectors.basePackage("com.example.demo")).build()
+                .tags(new Tag(TAG_1, "Tag 1 description."))
+                // Other tags here...
+                .apiInfo(apiInfo());
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder().title("My API").version("1.0.0").build();
     }
 
     @Primary
